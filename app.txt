@@ -1,0 +1,40 @@
+let items = [];
+
+const searchInput = document.getElementById('search-input');
+const suggestionsContainer = document.getElementById('suggestions-container');
+const itemNameDisplay = document.getElementById('item-name-display');
+const itemPriceDisplay = document.getElementById('item-price-display');
+
+fetch('data.json')
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Error loading data');
+        }
+        return response.json();
+    })
+    .then(data => {
+        items = data;
+        searchInput.removeAttribute('disabled');
+    })
+    .catch(error => {
+        console.error('Error loading data:', error);
+    });
+
+searchInput.addEventListener('input', (event) => {
+    const searchTerm = event.target.value.toLowerCase();
+    const results = items.filter(item => item.name.toLowerCase().includes(searchTerm));
+    displayResults(results);
+});
+
+function displayResults(results) {
+    suggestionsContainer.innerHTML = '';
+    for (const result of results) {
+        const itemElement = document.createElement('div');
+        itemElement.className = 'suggestion';
+        itemElement.innerHTML = `<strong>${result.name}</strong>: $${result.price.toFixed(2)}`;
+        itemElement.addEventListener('click', () => {
+            priceDisplay.innerHTML = `${result.name.toFixed(2)}: $${result.price.toFixed(2)}`;
+        });
+        suggestionsContainer.appendChild(itemElement);
+    }
+}
