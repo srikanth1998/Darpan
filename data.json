@@ -1,33 +1,5 @@
 [
   {
-    "name": "Packing Tape",
-    "price": 36
-  },
-  {
-    "name": "Pallet",
-    "price": 5
-  },
-  {
-    "name": "Trash removal",
-    "price": 0
-  },
-  {
-    "name": "Aagi no Moto - 16 oz",
-    "price": 75
-  },
-  {
-    "name": "Aagi no Moto 8 oz",
-    "price": 75
-  },
-  {
-    "name": "Aaji No Moto- Himalaya",
-    "price": 20
-  },
-  {
-    "name": "Agar Agar 10 Pcs. X 1 Oz.",
-    "price": 13
-  },
-  {
     "name": "Aloe Vera 1.5Lts. /12",
     "price": 24
   },
@@ -36,36 +8,12 @@
     "price": 24
   },
   {
-    "name": "Amul 1 Kg.",
-    "price": 95
-  },
-  {
-    "name": "Asparagus",
-    "price": 28
-  },
-  {
-    "name": "Bajri Rotla 4 Pcs.",
-    "price": 2.5
-  },
-  {
-    "name": "Bakkerkhani",
-    "price": 0
-  },
-  {
     "name": "Bamboo Shoot Fresh",
     "price": 139
   },
   {
     "name": "Bamboo Shoot Sliced 24 x 19 oz.",
     "price": 46
-  },
-  {
-    "name": "Bamboo Shoot Strips",
-    "price": 55
-  },
-  {
-    "name": "Banana Chiips",
-    "price": 14.5
   },
   {
     "name": "Banana Flower",
