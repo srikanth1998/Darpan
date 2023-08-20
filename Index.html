@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,8 +12,8 @@
     /* Style for the login form */
     .login-form {
       position: absolute;
-      top: 20px;
-      right: 20px;
+      top: 34px;
+      right: 50px;
       background-color: #f2f2f2;
       padding: 10px;
       border-radius: 5px;
@@ -43,13 +44,10 @@
   </style>
 </head>
 <body>
-  <div class="sticky">
-    <header>
-      <h1 class="store-name">Darpan Vegetables</h1>
-    </header>
+  <div class="login-form-container">
     <div class="login-form">
       <h3>Login</h3>
-      <form>
+      <form action="dashboard.html" method="post">
         <label for="username">Username:</label>
         <input type="text" id="username" name="username" placeholder="Enter your username">
 
@@ -59,6 +57,12 @@
         <button type="submit">Login</button>
       </form>
     </div>
+  </div>
+  
+  <div class="sticky">
+    <header>
+      <h1 class="store-name">Darpan Vegetables</h1>
+    </header>
     <div class="header-container">
       <h2>Item Search</h2>
       <div id="price-display"></div>
@@ -67,23 +71,12 @@
       <input type="text" id="search-input" placeholder="Search for an item..." disabled>
     </div>
   </div>
-  <div id="suggestions-container"></div>
   
-    <script>
-    // Get a reference to the login form
-    const loginForm = document.getElementById('login-form');
-
-    // Add an event listener to the form submission event
-    loginForm.addEventListener('submit', function(event) {
-      event.preventDefault(); // Prevent the default form submission
-
-      // Perform any authentication or validation here
-
-      // Redirect to another page
-      window.location.href = 'another-page.html'; // Replace 'another-page.html' with the actual URL
-    });
-  </script>
+  <div id="suggestions-container"></div>
   
   <script src="app.js"></script>
 </body>
 </html>
+
+
+
