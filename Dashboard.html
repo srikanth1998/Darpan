@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS LINK -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Fontawesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Darpan Vegetables</title>
+</head>
+<body>
+    <!-------------------------------------------- HEADER SECTION -->
+    <header class="header">
+        <a href="#" class="logo">
+            <img src="./image/pngegg.png" alt="logo">
+        </a>
+        <nav class="navbar">
+            <a href="#" class="active">home</a>
+            <a href="#" id="sales-button">sales</a>
+            <a href="#" id="inventory-button">inventory</a>
+            <a href="#" id="schedule-button">schedule</a>
+        </nav>
+    </header>
+    <!---------------------------------------------HEADER SECTION -->
+
+    <!-- Home section -->
+    <section id="home" class="home-section">
+        <!-- ... (your existing home section content) ... -->
+    </section>
+
+    <!-- Sales section -->
+    <section id="sales" class="sales-section" style="display: none;">
+        <!-- Display your sales data here -->
+        <h2>Sales Data</h2>
+        <!-- Add your sales data content here -->
+    </section>
+
+    <!-- Inventory section -->
+    <section id="inventory" class="inventory-section" style="display: none;">
+        <!-- Display your inventory data here -->
+        <h2>Inventory Data</h2>
+        <!-- Add your inventory data content here -->
+    </section>
+
+    <!-- Schedule section -->
+    <section id="schedule" class="schedule-section" style="display: none;">
+        <!-- Display your schedule creation form here -->
+        <h2>Create Schedule</h2>
+        <!-- Add your schedule creation form content here -->
+    </section>
+
+    <section class="footer">
+        <div class="search">
+            <input type="text" class="search-input" placeholder="Search">
+            <button class="btn btn-primary">search</button>
+        </div>
+        <div class="share">
+            <a href="#" class="fab fa-facebook"></a>
+            <a href="#" class="fab fa-twitter"></a>
+            <a href="#" class="fab fa-instagram"></a>
+            <a href="#" class="fab fa-linkedin"></a>
+            <a href="#" class="fab fa-pinterest"></a>
+        </div>
+        <div class="links">
+            <a href="#home">Sales Report</a>
+            <a href="#about">Inventory</a>
+            <a href="#menu">My Schedule</a>
+        </div>
+        <div class="credit">
+            created by <span>Nizami Sevindi</span> | all rights reserved!
+        </div>
+    </section>
+    <!---------------------------------------------FOOTER SECTION -->
+	<script src="Inventory.js"></script>
+    <script>
+        // Get references to the buttons and content sections
+        const salesButton = document.querySelector('#sales-button');
+        const inventoryButton = document.querySelector('#inventory-button');
+        const scheduleButton = document.querySelector('#schedule-button');
+
+        const salesSection = document.querySelector('#sales');
+        const inventorySection = document.querySelector('#inventory');
+        const scheduleSection = document.querySelector('#schedule');
+
+        // Add event listeners to the buttons
+        salesButton.addEventListener('click', function () {
+            salesSection.style.display = 'block';
+            inventorySection.style.display = 'none';
+            scheduleSection.style.display = 'none';
+        });
+
+        inventoryButton.addEventListener('click', function () {
+            salesSection.style.display = 'none';
+            inventorySection.style.display = 'block';
+            scheduleSection.style.display = 'none';
+        });
+
+        scheduleButton.addEventListener('click', function () {
+            salesSection.style.display = 'none';
+            inventorySection.style.display = 'none';
+            scheduleSection.style.display = 'block';
+        });
+    </script>
+</body>
+</html>
