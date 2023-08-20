@@ -68,6 +68,22 @@
     </div>
   </div>
   <div id="suggestions-container"></div>
+  
+    <script>
+    // Get a reference to the login form
+    const loginForm = document.getElementById('login-form');
+
+    // Add an event listener to the form submission event
+    loginForm.addEventListener('submit', function(event) {
+      event.preventDefault(); // Prevent the default form submission
+
+      // Perform any authentication or validation here
+
+      // Redirect to another page
+      window.location.href = 'another-page.html'; // Replace 'another-page.html' with the actual URL
+    });
+  </script>
+  
   <script src="app.js"></script>
 </body>
 </html>
